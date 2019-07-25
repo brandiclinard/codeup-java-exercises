@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
@@ -8,6 +9,8 @@ public class ConsoleExercises {
         // Output the following: The value of pi is approximately 3.14.
 
         System.out.format("The value of pi is approximately " + pi + ".%n");
+        //WALKTHROUGH NOTES:
+        System.out.printf("The value of pi is approximately %.2f. %n" , pi);
 
         Scanner scanner = new Scanner(System.in);
         scanner.useDelimiter("\n");
@@ -18,21 +21,21 @@ public class ConsoleExercises {
         //What happens if you input something that is not an integer?
             //--ERROR OCCURS. IT STATES INPUT MISMATCH EXCEPTION.
 
-//        System.out.print("Please enter three words:");
+        System.out.print("Please enter three words:");
 //        String wordOne = scanner.next();
 //        System.out.println("Your first word was: " + wordOne);
 //        String wordTwo = scanner.next();
 //        System.out.println("Your second word was: " + wordTwo);
-//        String wordThree = scanner.next();
-//        System.out.println("Your third word was: " + wordThree);
+        String wordThree = scanner.next();
+        System.out.println("Your third word was: " + wordThree);
         //What happens if you enter less than 3 words?
             //-- IT WILL ONLY RUN UPTO THE AMOUNT OF WORDS INPUT AND OUTPUT THE INFORMATION ONLY FOR THAT DESIGNATED AMOUNT. YOUR CONSOLE REMAINS RUNNING!!!! (until you input enough words)
         //What happens if you enter more than 3 words?
             //--PROCESS RUNS THROUGH THREE WORDS AND THEN DOES NOT INTAKE ANYMORE OR PRODUCE PRODUCTS FOR ANYTHING OUTSIDE OF ITS PARAMETERS.
-
-//        System.out.print("Please enter a sentence:");
-//        String sentence = scanner.nextLine();
-//        System.out.println(sentence);
+        scanner.nextLine();// used to move to the next line of code without skipping.
+        System.out.println("Please enter a sentence:");
+        String sentence = scanner.nextLine();
+        System.out.println(sentence);
 
 //        System.out.print("Please enter a sentence:");
 //        String sentence = scanner.next();
