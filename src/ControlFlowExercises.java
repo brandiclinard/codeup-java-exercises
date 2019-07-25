@@ -1,3 +1,6 @@
+import java.util.Scanner;
+
+
 public class ControlFlowExercises {
 
     public static void main(String[] args) {
@@ -77,6 +80,42 @@ public class ControlFlowExercises {
                 System.out.println(i);
             }
         }
+
+        /*Display a table of powers.
+
+        -Prompt the user to enter an integer.
+        -Display a table of squares and cubes from 1 to the value entered.
+        -Ask if the user wants to continue.
+        -Assume that the user will enter valid data.
+        -Only continue if the user agrees to.
+
+        Example Output:
+        What number would you like to go up to? 5
+
+        Here is your table!
+
+                number | squared| cubed
+                ------  | ------- | -----
+                1       | 1        | 1
+                2       | 4       | 8
+               3       | 9        | 27
+               4      | 16       | 64
+               5      | 25       | 125
+
+         */
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please enter an integer:");
+        String number = scanner.next();
+        Integer resultNumber = Integer.valueOf(number);
+        int squaredNumber = i *= i;
+        int cubedNumber = i = i^3;
+
+
+        System.out.println("number   |   squared    |   cubed   ");
+        System.out.println("--------- |  ----------- | ---------");
+        System.out.println(resultNumber + "        | "+squaredNumber+"           | "+cubedNumber+"        ");
+
 
 
     }
