@@ -51,13 +51,18 @@ public static void main(String[] args) {
     256
     65536*/
 
-    int i = 100;
+    long i = 2;
     do{
 //        System.out.println(i);
 //        i +=2;
+
+//        System.out.println(i);
+//        i -= 5;
+
         System.out.println(i);
-        i -= 5;
-    }while(i>=-10);
+        i*=i;
+
+    }while(i<=1000000);
 
 
 }
