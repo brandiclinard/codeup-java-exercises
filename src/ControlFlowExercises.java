@@ -15,11 +15,11 @@ public class ControlFlowExercises {
 
         5 6 7 8 9 10 11 12 13 14 15*/
 
-        //    int i = 5;
-        //    while( i<=15){
-        //        System.out.println(i);
-        //        i++;
-        //    }
+//            int i = 5;
+//            while( i<=15){
+//                System.out.print(i + " ");
+//                i++;
+//            }
 
         /*Do While
 
@@ -32,24 +32,30 @@ public class ControlFlowExercises {
         256
         65536*/
 
-        //    long i = 2;
-        //    do{
-        ////        System.out.println(i);
-        ////        i +=2;
-        //
-        ////        System.out.println(i);
-        ////        i -= 5;
-        //
-        ////        System.out.println(i);
-        ////        i*=i;
-        //
-        //    }while(i<=1000000);
+//        long i = 0;
+//        do{
+//            System.out.println(i);
+//            i +=2;
+//
+//        }while(i <= 100);
+
+//        i = 100;
+//        do{
+//            System.out.println(i);
+//            i -= 5;
+//        }while(i >= -10);
+
+//        i = 2;
+//        do{
+//            System.out.println(i);
+//            i*=i;
+//        }while(i<=1000000);
 
         /*Refactor the previous two exercises to use a for loop instead.*/
 
-        //    for (int i = 5; i <= 15; i++){
-        //        System.out.println(i);
-        //    }
+            for (int i = 5; i <= 15; i++){
+                System.out.print(i + " ");
+            }
 
         //    for (int i=0; i<=100;i+=2){
         //        System.out.println(i);
@@ -59,10 +65,10 @@ public class ControlFlowExercises {
         //        System.out.println(i);
         //    }
 
-//        for(long i=2; i<=1000000; i*=i) {
-//            System.out.println(i);
+    //        for(long i=2; i<=1000000; i*=i) {
+    //            System.out.println(i);
+    //        }
 //        }
-        //    }
 
            /* One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
 
@@ -104,7 +110,7 @@ public class ControlFlowExercises {
                5      | 25       | 125
 
          */
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 //
 //        String choice = "y";
 //
@@ -135,6 +141,11 @@ public class ControlFlowExercises {
 //
 //        }while(!choice.equalsIgnoreCase("n"));
 
+//        Walk through notes:
+        squaresCubes();
+
+
+
         /*Convert given number grades into letter grades.
                 -Prompt the user for a numerical grade from 0 to 100.
         Display the corresponding letter grade.
@@ -149,45 +160,54 @@ public class ControlFlowExercises {
         D : 66 - 60
         F : 59 - 0*/
 
-        String choice = "y";
+//        String choice = "y";
+//
+//         do {
+//             System.out.println("Let's convert your numerical grade to a letter grade. Please insert your numerical grade: ");
+//             int numerical = scanner.nextInt();
+//
+//             if (numerical >= 97 && numerical <= 100) {
+//                 System.out.println("A+");
+//             }else if(numerical >=91 && numerical <=96){
+//                 System.out.println("A");
+//             }else if(numerical >=88 && numerical <=90) {
+//                 System.out.println("A-");
+//             }else if(numerical >= 86 && numerical <=87){
+//                 System.out.println("B+");
+//             }else if(numerical >=82 && numerical <=85){
+//                 System.out.println("B");
+//             } else if (numerical >= 80 && numerical <= 81) {
+//                 System.out.println("B-");
+//             }else if(numerical >= 76 && numerical <=79){
+//                 System.out.println("C+");
+//             }else if(numerical >= 71 && numerical <= 75){
+//                 System.out.println("C");
+//             }else if(numerical >= 67 && numerical <= 70) {
+//                 System.out.println("C-");
+//             }else if(numerical >= 65 && numerical <=66){
+//                 System.out.println("D+");
+//             }else if(numerical >=62 && numerical <=64) {
+//                 System.out.println("D");
+//             } else if (numerical >= 60 && numerical <= 66) {
+//                 System.out.println("D-");
+//             } else if (numerical >= 0 && numerical <= 59) {
+//                 System.out.println("F");
+//             }else {
+//                 System.out.println("You did not enter numerical grade between 100 - 0.");
+//             }
+//             System.out.println("Do you wish to continue? (y/n): ");
+//            choice = scanner.next();
+//            System.out.println();
+//
+//         }while(!choice.equalsIgnoreCase("n"));
+    }
 
-         do {
-             System.out.println("Let's convert your numerical grade to a letter grade. Please insert your numerical grade: ");
-             int numerical = scanner.nextInt();
+    //WALK THROUGH NOTES:
+    private static void squaresCubes(){
+        Scanner scan = new Scanner(System.in);
 
-             if (numerical >= 97 && numerical <= 100) {
-                 System.out.println("A+");
-             }else if(numerical >=91 && numerical <=96){
-                 System.out.println("A");
-             }else if(numerical >=88 && numerical <=90) {
-                 System.out.println("A-");
-             }else if(numerical >= 86 && numerical <=87){
-                 System.out.println("B+");
-             }else if(numerical >=82 && numerical <=85){
-                 System.out.println("B");
-             } else if (numerical >= 80 && numerical <= 81) {
-                 System.out.println("B-");
-             }else if(numerical >= 76 && numerical <=79){
-                 System.out.println("C+");
-             }else if(numerical >= 71 && numerical <= 75){
-                 System.out.println("C");
-             }else if(numerical >= 67 && numerical <= 70) {
-                 System.out.println("C-");
-             }else if(numerical >= 65 && numerical <=66){
-                 System.out.println("D+");
-             }else if(numerical >=62 && numerical <=64) {
-                 System.out.println("D");
-             } else if (numerical >= 60 && numerical <= 66) {
-                 System.out.println("D-");
-             } else if (numerical >= 0 && numerical <= 59) {
-                 System.out.println("F");
-             }else {
-                 System.out.println("You did not enter numerical grade between 100 - 0.");
-             }
-             System.out.println("Do you wish to continue? (y/n): ");
-            choice = scanner.next();
-            System.out.println();
+        System.out.println("What number would you like to go up to?");
 
-         }while(!choice.equalsIgnoreCase("n"));
+
     }
 }
