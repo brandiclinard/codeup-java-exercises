@@ -46,48 +46,48 @@ public class MethodsExercises {
     }
 
 
-//    public static int getInteger(int min, int max) {
-//        Scanner scanner = new Scanner(System.in);
-//
-//        int userInput;
-//        do {
-//            System.out.print("Enter a number between " + min + " and " + max + ":\n");
-//            userInput = scanner.nextInt();
-//
-//            if (userInput < min) {
-//                System.out.println("Your number is too low. Please try again.\n");
-//            } else if (userInput > max) {
-//                System.out.println("Your number is too high. Please try again.\n");
-//            } else {
-//                System.out.println("You did it!\n");
-//                break;
-//            }
-//        } while (true);
-//        return userInput;
-//    }
+    public static int getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+
+        int userInput;
+        do {
+            System.out.print("Enter a number between " + min + " and " + max + ":\n");
+            userInput = scanner.nextInt();
+
+            if (userInput < min) {
+                System.out.println("Your number is too low. Please try again.\n");
+            } else if (userInput > max) {
+                System.out.println("Your number is too high. Please try again.\n");
+            } else {
+                System.out.println("You did it!\n");
+                break;
+            }
+        } while (true);
+        return userInput;
+    }
 
 
     // walk through notes:
 
-    public static int getInteger(int min, int max){// -- recursion method
-
-        int answer;
-        Scanner scanner = new Scanner(System.in);
-
-        answer = scanner.nextInt();
-        if (answer < min) {
-            System.out.println("Too low.");
-            return getInteger(min, max);
-        } else if (answer > max){
-            System.out.println("Too high.");
-            return getInteger(min, max);
-        }else{
-            System.out.println("Mission accomplished!");
-            return answer;
-        }
-
-//        return answer;
-}
+//    public static int getInteger(int min, int max){// -- recursion method
+//
+//        int answer;
+//        Scanner scanner = new Scanner(System.in);
+//
+//        answer = scanner.nextInt();
+//        if (answer < min) {
+//            System.out.println("Too low.");
+//            return getInteger(min, max);
+//        } else if (answer > max){
+//            System.out.println("Too high.");
+//            return getInteger(min, max);
+//        }else{
+//            System.out.println("Mission accomplished!");
+//            return answer;
+//        }
+//
+////        return answer;
+//}
 
 /*Calculate the factorial of a number.
 
@@ -106,49 +106,61 @@ Test the application and find the integer for the highest factorial that can be 
 Use recursion to implement the factorial.
 */
 
-    public static void factorialGame() {
-        Scanner scanner = new Scanner(System.in);
+//    public static void factorialGame() {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        do {
+//            int fact = getInteger(1, 10);
+//
+//            factorialChart(fact);
+//
+//            System.out.println("Want to play again?");
+//            if (!scanner.nextLine().toUpperCase().contains("Y")) return;
+//        } while (true);
+//    }
+//
+//    public static void factorialChart(int num){
+//
+//        long factorial = 1;
+//
+//        for(int i = 1; i <= num; i ++){
+//            factorial = 1;
+//            System.out.print(i + "! = ");
+//            for (int j = 1; j <= i; j++){
+//                System.out.println(j );
+//                if (j !=i ) System.out.println(" x ");
+//                else for(int k = 1; k <= (num-i); k++)
+//                    System.out.println("    ");
+//                factorial *= j;
+//            }
+//            System.out.println(" = " + factorial);
+//        }
+//    }
 
-        do {
-            int fact = getInteger(1, 10);
-
-            factorialChart(fact);
-
-            System.out.println("Want to play again?");
-            if (!scanner.nextLine().toUpperCase().contains("Y")) return;
-        } while (true);
-    }
-
-    public static void factorialChart(int num){
-
-        long factorial = 1;
-
-        for(int i = 1; i <= num; i ++){
-            factorial = 1;
-            System.out.print(i + "! = ");
-            for (int j = 1; j <= i; j++){
-                System.out.println(j );
-                if (j !=i ) System.out.println(" x ");
-                else for(int k = 1; k <= (num-i); k++)
-                    System.out.println("    ");
-                factorial *= j;
-            }
-            System.out.println(" = " + factorial);
-        }
-    }
-
-
-
-
-
-
-    /*Create an application that simulates dice rolling.
+/*Create an application that simulates dice rolling.
 
 Ask the user to enter the number of sides for a pair of dice.
 Prompt the user to roll the dice.
 "Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
 Use static methods to implement the method(s) that generate the random numbers.
 Use the .random method of the java.lang.Math class to generate random numbers.*/
+public static int rollDie (int sides){
+    return (int) Math.ceil(Math.random() * sides);
+}
+
+public static void rollDice() {
+    System.out.println("Enter the number of sides for a pair of dice?");
+    int sides = getInteger(4,20);
+    int die1 = rollDie(sides);
+    int die2 = rollDie(sides);
+    System.out.printf("You rolled a %d and a %d.%n", die1, die2 );
+
+}
+
+
+
+
+
 
 
 
@@ -197,13 +209,12 @@ Set an upper limit on the number of guesses.*/
         System.out.println(modulus(100, 3));   // 1
         System.out.println(multiplyNoOperator(-4,4));   // 16
         System.out.println(muliplicationLoop(5.5, 2));   //- second parameter must be positive and an int in order for the code to work.
-        System.out.print("Enter a number between 1 and 10: ");
+//        System.out.print("Enter a number between 1 and 10: ");
         int userInput = getInteger(1, 10);
-        System.out.println("Please enter a number from 1 to 10:");
-        factorialGame();
+//        factorialGame();
 //        Scanner scanner = new Scanner(System.in);
 //        String userInput = scanner.nextLine();
-
+        rollDice();
 
     }
 }
