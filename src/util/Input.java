@@ -69,9 +69,13 @@ public class Input {
     }
 
     //        double getDouble()
-    public double geteDouble() {
+    public double getDouble() {
         return this.scanner.nextDouble();
 
+    }
+    public double getDouble(String prompt){
+        System.out.println(prompt);
+        return this.getDouble();
     }
 
 
@@ -87,8 +91,7 @@ public class Input {
         System.out.println(input.getInt());
         System.out.println(input.getDouble(14.5,20.5));
         System.out.println("Please enter a double type:\n");
-        System.out.println(input.geteDouble());
-
+        System.out.println(input.getDouble());
     }
 
 }
