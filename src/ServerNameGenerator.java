@@ -21,7 +21,7 @@ public class ServerNameGenerator {
 
         String adjective = randomElement(adjectiveArray);
 
-        System.out.printf("Here is your hyphenated name: " + noun + "-" + adjective);
+        System.out.printf("Here is your hyphenated name: " + adjective + "-" + noun);
     }
 
 }
