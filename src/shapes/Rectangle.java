@@ -2,13 +2,17 @@ package shapes;
 
 public class Rectangle extends Quadrilateral implements Measurable{
 
+    public Rectangle(double length, double width) {
+        super(length,width);
+    }
+
     @Override
-    void setLength(double length) {
+    public void setLength(double length) {
         this.length = length;
     }
 
     @Override
-    void setWidth(double width) {
+    public void setWidth(double width) {
         this.width= width;
     }
 
@@ -26,10 +30,10 @@ public class Rectangle extends Quadrilateral implements Measurable{
 //    protected double length;
 //    protected double width;
 //
-    public Rectangle(double length, double width) {
-        this.length = length;
-        this.width = width;
-    }
+//    public Rectangle(double length, double width) {
+//        this.length = length;
+//        this.width = width;
+//    }
 //
 //    public double getLength() {
 //        return length;

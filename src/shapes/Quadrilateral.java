@@ -1,6 +1,6 @@
 package shapes;
 
-public abstract class Quadrilateral extends Shape implements Measurable{
+abstract class Quadrilateral extends Shape implements Measurable{
 
     /*-protected properties for length and width.
 -a constructor that accepts two numbers for the length and width and sets those properties.
@@ -25,7 +25,8 @@ protected double width;
         return width;
     }
 
-    abstract void setLength(double length);
+//-- you must implement these methods if you want to be like a quadrilateral
+    public abstract void setLength(double length);
 
-    abstract void setWidth(double width);
+    public abstract void setWidth(double width);
 }
