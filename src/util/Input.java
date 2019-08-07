@@ -16,14 +16,24 @@ public class Input {
          return this.scanner.nextLine();
     }
 
+    public String getString (String prompt){
+        System.out.println(prompt);
+        return this.getString();
+    }
+
     //        boolean yesNo()
-    boolean yesNo() {
-        String input = this.scanner.nextLine();
-        if (input.equalsIgnoreCase("Y") || input.equalsIgnoreCase("yes")) {
+    public boolean yesNo() {
+        String answer = this.scanner.nextLine();
+        if (answer.equalsIgnoreCase("Y") || answer.equalsIgnoreCase("yes")) {
             return true;
         } else {
             return false;
         }
+    }
+
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        return this.yesNo();
     }
 
     //        int getInt(int min, int max)
