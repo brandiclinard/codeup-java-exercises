@@ -34,14 +34,14 @@ public class GradesApplication {
 
         System.out.println("Welcome!\n");
         showStudents();
-        String key = input.getString("What student would you like to see more information on?");
-
-        if(students.containsKey(key)){// need to put into do while loop... get last of walk through notes from github
-            System.out.println("Name: " + students.get(key).getName() + "- GitHub Username: " + key);
-            System.out.println("Current Average: " + students.get(key).getGradeAverage());
-        }else{
-            System.out.println("Sorry, no student found with the Github username of " + key);
-        }
+//        String key = input.getString("What student would you like to see more information on?");
+//
+//        if(students.containsKey(key)){// need to put into do while loop... get last of walk through notes from github
+//            System.out.println("Name: " + students.get(key).getName() + "- GitHub Username: " + key);
+//            System.out.println("Current Average: " + students.get(key).getGradeAverage());
+//        }else{
+//            System.out.println("Sorry, no student found with the Github username of " + key);
+//        }
 
 
     }
