@@ -16,66 +16,119 @@ public class Input {
          return this.scanner.nextLine();
     }
 
+    public String getString (String prompt){
+        System.out.println(prompt);
+        return this.getString();
+    }
+
     //        boolean yesNo()
-    boolean yesNo() {
-        String input = this.scanner.nextLine();
-        if (input.equalsIgnoreCase("Y") || input.equalsIgnoreCase("yes")) {
+    public boolean yesNo() {
+        String answer = this.scanner.nextLine();
+        if (answer.equalsIgnoreCase("Y") || answer.equalsIgnoreCase("yes")) {
             return true;
         } else {
             return false;
         }
     }
 
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        return this.yesNo();
+    }
+
     //        int getInt(int min, int max)
     public int getInt(int min, int max) {
+        int input;
 
-        do {
-            System.out.print("Enter a number between " + min + " and " + max + ":\n");
-            int input = scanner.nextInt();
+        try {
 
-            if (input < min) {
-                System.out.println("Your number is too low. Please try again.\n");
-            } else if (input > max) {
-                System.out.println("Your number is too high. Please try again.\n");
-            } else {
-                System.out.println("You did it!\n");
-                return input;
-            }
-        } while (true);
+            do {
+                System.out.print("Enter a number between " + min + " and " + max + ":\n");
+                //            int input = scanner.nextInt();
+                input=Integer.valueOf(getString());
+
+                if (input < min) {
+                    System.out.println("Your number is too low. Please try again.\n");
+                } else if (input > max) {
+                    System.out.println("Your number is too high. Please try again.\n");
+                } else {
+                    System.out.println("You did it!\n");
+                    return input;
+                }
+            } while (true);
+
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("You did not input an integer. Please try again");
+            return getInt(min, max);
+        }
     }
+
+//    Integer.valueOf(String s);
+
+//    Double.valueOf(String s);
 
 
     //        int getInt()
     public int getInt() {
-        return this.scanner.nextInt();
+        try {
+            return this.scanner.nextInt();
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("You did not enter an integer. Please try again.");
+            return getInt();
+        }
     }
 
     //        double getDouble(double min, double max)
     public double getDouble(double min, double max) {
+        double input;
 
-        do {
-            System.out.print("Enter a number between " + min + " and " + max + ":\n");
-            double input = scanner.nextDouble();
+        try {
 
-            if (input < min) {
-                System.out.println("Your number is too low. Please try again.\n");
-            } else if (input > max) {
-                System.out.println("Your number is too high. Please try again.\n");
-            } else {
-                System.out.println("You did it!\n");
-                return input;
-            }
-        } while (true);
+            do {
+
+                System.out.print("Enter a number between " + min + " and " + max + ":\n");
+//                double input = scanner.nextDouble();
+                input = Double.valueOf(getString());
+
+                if (input < min) {
+                    System.out.println("Your number is too low. Please try again.\n");
+                } else if (input > max) {
+                    System.out.println("Your number is too high. Please try again.\n");
+                } else {
+                    System.out.println("You did it!\n");
+                    return input;
+                }
+            } while (true);
+
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("You did not enter an double. Please try again.");
+            return getDouble(min, max);
+        }
     }
 
     //        double getDouble()
     public double getDouble() {
-        return this.scanner.nextDouble();
-
+        try {
+            return this.scanner.nextDouble();
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("You did not enter a double. Please try again.");
+            return getDouble();
+        }
     }
-    public double getDouble(String prompt){
-        System.out.println(prompt);
-        return this.getDouble();
+
+    public double getDouble(String prompt) {
+        try {
+            System.out.println(prompt);
+            return this.getDouble();
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("You did not enter a double. Please try again.");
+            return getDouble();
+        }
     }
 
 
